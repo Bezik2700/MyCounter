@@ -13,10 +13,3 @@ data class NameEntity(
     val nextCategory: String,
     val showMyDialog: Boolean
 )
-
-@Entity
-data class Currency(
-    @PrimaryKey(autoGenerate = true)
-    val id: Int? = null,
-    val currency: String
-)
