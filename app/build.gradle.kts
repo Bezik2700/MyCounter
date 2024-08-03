@@ -52,13 +52,14 @@ android {
 
 dependencies {
 
-    //Room
+    // Room
     implementation(libs.androidx.room.ktx)
     kapt(libs.androidx.room.compiler)
     // ViewModel
     implementation(libs.androidx.lifecycle.viewmodel.compose)
+    // DataStore
+    implementation(libs.androidx.datastore.preferences)
 
-    implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))

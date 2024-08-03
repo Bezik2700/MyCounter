@@ -9,5 +9,14 @@ data class NameEntity(
     val id: Int? = null,
     val name: String,
     val price: String,
-    val counter: String
+    val nextCurrency: String,
+    val nextCategory: String,
+    val showMyDialog: Boolean
+)
+
+@Entity
+data class Currency(
+    @PrimaryKey(autoGenerate = true)
+    val id: Int? = null,
+    val currency: String
 )

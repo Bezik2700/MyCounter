@@ -18,3 +18,15 @@ interface Dao {
     @Query("SELECT * FROM NameEntity")
     fun getAllItems(): Flow<List<NameEntity>>
 }
+
+@Dao
+interface Dao2 {
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertItem(currency: Currency)
+
+    @Delete
+    suspend fun deleteItem(currency: Currency)
+
+    @Query("SELECT * FROM NameEntity")
+    fun getAllItems(): Flow<List<Currency>>
+}
